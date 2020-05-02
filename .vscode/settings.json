@@ -1,0 +1,13 @@
+{
+  "sqltools.connections": [
+    {
+      "askForPassword": true,
+      "database": "movies",
+      "dialect": "PostgreSQL",
+      "name": "PGSQL",
+      "port": 5432,
+      "server": "localhost",
+      "username": "andy"
+    }
+  ]
+}
