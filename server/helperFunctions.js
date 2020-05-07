@@ -1,85 +1,33 @@
 const Promise = require("bluebird");
 const db = require("./db");
 
-const getMainMovieDetails = (id) => {
-  return new Promise((resolve, reject) => {
-    db.query(
-      "SELECT * FROM movieSchema WHERE id = $1",
-      [id],
-      (error, results) => {
-        if (error) {
-          reject(error);
-        }
-        resolve(results.rows);
-      }
-    );
-  });
+let queries = [
+  "SELECT * FROM movieSchema WHERE id = $1",
+  "SELECT ds.director FROM directorsForSpecificMovie dfsm INNER JOIN directorSchema ds ON (dfsm.directorId=ds.id) WHERE movieId = $1",
+  "SELECT ws.writer, wcs.category FROM writersForSpecificMovie wfsm INNER JOIN writerSchema ws ON (wfsm.writerId=ws.id) LEFT OUTER JOIN writerCategorySchema wcs ON (wfsm.writerCategoryId=wcs.id) WHERE movieId = $1",
+  "SELECT ss.name FROM starsForSpecificMovie sfsm INNER JOIN starSchema ss ON (sfsm.starId=ss.id) WHERE movieId = $1",
+  "SELECT cs.category FROM categoriesForSpecificMovie cfsm INNER JOIN categorySchema cs ON (cfsm.categoryId=cs.id) WHERE movieId = $1",
+];
+
+const getMovieDetails = (id) => {
+  let details = [];
+  for (let i = 0; i < queries.length; i++) {
+    details.push(getPromise(queries[i], id));
+  }
+  return details;
 };
 
-const getDirectors = (id) => {
+const getPromise = (query, id) => {
   return new Promise((resolve, reject) => {
-    db.query(
-      "SELECT ds.director FROM directorsForSpecificMovie dfsm INNER JOIN directorSchema ds ON (dfsm.directorId=ds.id) WHERE movieId = $1",
-      [id],
-      (error, results) => {
-        if (error) {
-          reject(error);
-        }
-        resolve(results.rows);
+    db.query(query, [id], (error, results) => {
+      if (error) {
+        reject(error);
       }
-    );
-  });
-};
-
-const getWriters = (id) => {
-  return new Promise((resolve, reject) => {
-    db.query(
-      "SELECT ws.writer, wcs.category FROM writersForSpecificMovie wfsm INNER JOIN writerSchema ws ON (wfsm.writerId=ws.id) LEFT OUTER JOIN writerCategorySchema wcs ON (wfsm.writerCategoryId=wcs.id) WHERE movieId = $1",
-      [id],
-      (error, results) => {
-        if (error) {
-          reject(error);
-        }
-        resolve(results.rows);
-      }
-    );
-  });
-};
-
-const getStars = (id) => {
-  return new Promise((resolve, reject) => {
-    db.query(
-      "SELECT ss.name FROM starsForSpecificMovie sfsm INNER JOIN starSchema ss ON (sfsm.starId=ss.id) WHERE movieId = $1",
-      [id],
-      (error, results) => {
-        if (error) {
-          reject(error);
-        }
-        resolve(results.rows);
-      }
-    );
-  });
-};
-
-const getCategories = (id) => {
-  return new Promise((resolve, reject) => {
-    db.query(
-      "SELECT cs.category FROM categoriesForSpecificMovie cfsm INNER JOIN categorySchema cs ON (cfsm.categoryId=cs.id) WHERE movieId = $1",
-      [id],
-      (error, results) => {
-        if (error) {
-          reject(error);
-        }
-        resolve(results.rows);
-      }
-    );
+      resolve(results.rows);
+    });
   });
 };
 
 module.exports = {
-  getMainMovieDetails,
-  getDirectors,
-  getWriters,
-  getStars,
-  getCategories,
+  getMovieDetails,
 };

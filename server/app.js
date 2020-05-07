@@ -9,13 +9,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/api/movies/:id", (req, res) => {
   let id = req.params.id;
-  let movie = helpers.getMainMovieDetails(id);
-  let directors = helpers.getDirectors(id);
-  let writers = helpers.getWriters(id);
-  let stars = helpers.getStars(id);
-  let categories = helpers.getCategories(id);
+  let details = helpers.getMovieDetails(id);
 
-  Promise.all([movie, directors, writers, stars, categories])
+  Promise.all(details)
     .then((result) => {
       res.status(200).send(result);
     })
