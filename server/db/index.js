@@ -15,7 +15,6 @@ pool.on("error", (err, client) => {
 
 module.exports = {
   query: (text, params, callback) => {
-    console.log("hello?");
     return pool.query(text, params, callback);
   },
 };
