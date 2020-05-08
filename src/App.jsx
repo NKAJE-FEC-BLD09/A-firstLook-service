@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import DropdownMenu from "./components/DropdownMenu.jsx";
 import TitleBlock from "./components/TitleBlock.jsx";
+import TrailerView from "./components/TrailerView.jsx";
 
 class App extends Component {
   constructor(props) {
@@ -43,6 +44,9 @@ class App extends Component {
             main={this.state.main}
             categories={this.state.categories}
           />
+        </div>
+        <div>
+          <TrailerView main={this.state.main} />
         </div>
       </div>
     );
