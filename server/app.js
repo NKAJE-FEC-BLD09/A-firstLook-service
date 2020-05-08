@@ -3,9 +3,11 @@ const app = express();
 const bodyParser = require("body-parser");
 const Promise = require("bluebird");
 const helpers = require("./helperFunctions");
+const cors = require("cors");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 app.get("/api/movies/:id", (req, res) => {
   let id = req.params.id;
