@@ -3,6 +3,7 @@ import "./App.css";
 import DropdownMenu from "./components/DropdownMenu.jsx";
 import TitleBlock from "./components/TitleBlock.jsx";
 import TrailerView from "./components/TrailerView.jsx";
+import MoreInfo from "./components/MoreInfo.jsx";
 
 class App extends Component {
   constructor(props) {
@@ -47,6 +48,14 @@ class App extends Component {
         </div>
         <div>
           <TrailerView main={this.state.main} />
+        </div>
+        <div>
+          <MoreInfo
+            main={this.state.main}
+            directors={this.state.directors}
+            writers={this.state.writers}
+            stars={this.state.stars}
+          />
         </div>
       </div>
     );
