@@ -1,62 +1,62 @@
 module.export = [
   {
-    movieId: 1,
-    starId: 1,
+    movieid: 1,
+    starid: 1,
   },
   {
-    movieId: 1,
-    starId: 2,
+    movieid: 1,
+    starid: 2,
   },
   {
-    movieId: 1,
-    starId: 3,
+    movieid: 1,
+    starid: 3,
   },
   {
-    movieId: 2,
-    starId: 4,
+    movieid: 2,
+    starid: 4,
   },
   {
-    movieId: 2,
-    starId: 5,
+    movieid: 2,
+    starid: 5,
   },
   {
-    movieId: 2,
-    starId: 6,
+    movieid: 2,
+    starid: 6,
   },
   {
-    movieId: 3,
-    starId: 7,
+    movieid: 3,
+    starid: 7,
   },
   {
-    movieId: 3,
-    starId: 8,
+    movieid: 3,
+    starid: 8,
   },
   {
-    movieId: 3,
-    starId: 9,
+    movieid: 3,
+    starid: 9,
   },
   {
-    movieId: 4,
-    starId: 8,
+    movieid: 4,
+    starid: 8,
   },
   {
-    movieId: 4,
-    starId: 10,
+    movieid: 4,
+    starid: 10,
   },
   {
-    movieId: 4,
-    starId: 11,
+    movieid: 4,
+    starid: 11,
   },
   {
-    movieId: 5,
-    starId: 12,
+    movieid: 5,
+    starid: 12,
   },
   {
-    movieId: 5,
-    starId: 13,
+    movieid: 5,
+    starid: 13,
   },
   {
-    movieId: 5,
-    starId: 14,
+    movieid: 5,
+    starid: 14,
   },
 ];

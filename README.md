@@ -54,3 +54,13 @@ knex migrate:latest
 knex seed:run
 
 ```
+
+### Deleting Database
+
+If at any time you need to delete the database, from within the root directory:
+
+```sh
+
+knex migrate:rollback
+
+```

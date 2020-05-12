@@ -1,50 +1,50 @@
 module.exports = [
   {
-    movieId: 1,
-    categoryId: 1,
+    movieid: 1,
+    categoryid: 1,
   },
   {
-    movieId: 1,
-    categoryId: 2,
+    movieid: 1,
+    categoryid: 2,
   },
   {
-    movieId: 1,
-    categoryId: 3,
+    movieid: 1,
+    categoryid: 3,
   },
   {
-    movieId: 2,
-    categoryId: 1,
+    movieid: 2,
+    categoryid: 1,
   },
   {
-    movieId: 2,
-    categoryId: 4,
+    movieid: 2,
+    categoryid: 4,
   },
   {
-    movieId: 2,
-    categoryId: 5,
+    movieid: 2,
+    categoryid: 5,
   },
   {
-    movieId: 3,
-    categoryId: 1,
+    movieid: 3,
+    categoryid: 1,
   },
   {
-    movieId: 4,
-    categoryId: 1,
+    movieid: 4,
+    categoryid: 1,
   },
   {
-    movieId: 4,
-    categoryId: 4,
+    movieid: 4,
+    categoryid: 4,
   },
   {
-    movieId: 5,
-    categoryId: 6,
+    movieid: 5,
+    categoryid: 6,
   },
   {
-    movieId: 5,
-    categoryId: 7,
+    movieid: 5,
+    categoryid: 7,
   },
   {
-    movieId: 5,
-    categoryId: 8,
+    movieid: 5,
+    categoryid: 8,
   },
 ];

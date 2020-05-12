@@ -12,33 +12,37 @@ const writersForSpecificMovie = require("./../../data/writersForSpecificMovie");
 exports.seed = function (knex) {
   // Deletes ALL existing entries
   return Promise.all([
-    knex("movieSchema").del(),
-    knex("directorSchema").del(),
-    knex("directorsForSpecificMovie").del(),
-    knex("writerSchema").del(),
-    knex("writerCategorySchema").del(),
-    knex("writersForSpecificMovie").del(),
-    knex("starSchema").del(),
-    knex("starsForSpecificMovie").del(),
-    knex("categorySchema").del(),
-    knex("categoriesForSpecificMovie").del(),
+    knex("directorsforspecificmovie").del(),
+    knex("writersforspecificmovie").del(),
+    knex("starsforspecificmovie").del(),
+    knex("categoriesforspecificmovie").del(),
   ])
     .then(() => {
       return Promise.all([
-        knex("movieSchema").insert(movieSchema),
-        knex("directorSchema").insert(directorSchema),
-        knex("writerSchema").insert(writerSchema),
-        knex("writerCategorySchema").insert(writerCategorySchema),
-        knex("starSchema").insert(starSchema),
-        knex("categorySchema").insert(categorySchema),
+        knex("movieschema").del(),
+        knex("directorschema").del(),
+        knex("writerschema").del(),
+        knex("writercategoryschema").del(),
+        knex("starschema").del(),
+        knex("categoryschema").del(),
       ]);
     })
     .then(() => {
       return Promise.all([
-        knex("directorsForSpecificMovie").insert(directorsForSpecificMovie),
-        knex("writersForSpecificMovie").insert(writersForSpecificMovie),
-        knex("starsForSpecificMovie").insert(starsForSpecificMovie),
-        knex("categoriesForSpecificMovie").insert(categoriesForSpecificMovie),
+        knex("movieschema").insert(movieSchema),
+        knex("directorschema").insert(directorSchema),
+        knex("writerschema").insert(writerSchema),
+        knex("writercategoryschema").insert(writerCategorySchema),
+        knex("starschema").insert(starSchema),
+        knex("categoryschema").insert(categorySchema),
+      ]);
+    })
+    .then(() => {
+      return Promise.all([
+        knex("directorsforspecificmovie").insert(directorsForSpecificMovie),
+        knex("writersforspecificmovie").insert(writersForSpecificMovie),
+        knex("starsforspecificmovie").insert(starsForSpecificMovie),
+        knex("categoriesforspecificmovie").insert(categoriesForSpecificMovie),
       ]);
     })
     .catch((err) => console.log(err));

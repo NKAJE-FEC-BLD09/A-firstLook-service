@@ -1,79 +1,82 @@
 exports.up = function (knex) {
   return Promise.all([
-    knex.schema.createTable("movieSchema", (table) => {
+    knex.schema.createTable("movieschema", (table) => {
       table.increments("id").primary();
       table.string("title");
       table.string("rated");
       table.string("duration");
-      table.string("releaseDate");
+      table.string("releasedate");
       table.string("description");
-      table.decimal("avgReview");
-      table.integer("numReviews");
-      table.string("imageUrl");
-      table.string("videoUrl");
+      table.decimal("avgreview");
+      table.integer("numreviews");
+      table.string("imageurl");
+      table.string("videourl");
       table.integer("metascore");
-      table.integer("numUserReviews");
-      table.integer("numCriticReviews");
+      table.integer("numuserreviews");
+      table.integer("numcriticreviews");
       table.integer("popularity");
-      table.integer("popularityChange");
+      table.integer("popularitychange");
       table.integer("oscars");
       table.integer("awards");
       table.integer("nominations");
     }),
-    knex.schema.createTable("directorSchema", (table) => {
+    knex.schema.createTable("directorschema", (table) => {
       table.increments("id").primary();
       table.string("director");
     }),
-    knex.schema.createTable("directorsForSpecificMovie", (table) => {
-      table.integer("movieId").unsigned().references("movieSchema.id");
-      table.integer("directorId").unsigned().references("directorSchema.id");
+    knex.schema.createTable("directorsforspecificmovie", (table) => {
+      table.integer("movieid").unsigned().references("movieschema.id");
+      table.integer("directorid").unsigned().references("directorschema.id");
     }),
-    knex.schema.createTable("writerSchema", (table) => {
+    knex.schema.createTable("writerschema", (table) => {
       table.increments("id").primary();
       table.string("writer");
     }),
-    knex.schema.createTable("writerCategorySchema", (table) => {
+    knex.schema.createTable("writercategoryschema", (table) => {
       table.increments("id").primary();
       table.string("category");
     }),
-    knex.schema.createTable("writersForSpecificMovie", (table) => {
-      table.integer("movieId").unsigned().references("movieSchema.id");
-      table.integer("writerId").unsigned().references("writerSchema.id");
+    knex.schema.createTable("writersforspecificmovie", (table) => {
+      table.integer("movieid").unsigned().references("movieschema.id");
+      table.integer("writerid").unsigned().references("writerschema.id");
       table
-        .integer("writerCategoryId")
+        .integer("writercategoryid")
         .unsigned()
-        .references("writerCategorySchema.id");
+        .references("writercategoryschema.id");
     }),
-    knex.schema.createTable("starSchema", (table) => {
+    knex.schema.createTable("starschema", (table) => {
       table.increments("id").primary();
       table.string("star");
     }),
-    knex.schema.createTable("starsForSpecificMovie", (table) => {
-      table.integer("movieId").unsigned().references("movieSchema.id");
-      table.integer("starId").unsigned().references("starSchema.id");
+    knex.schema.createTable("starsforspecificmovie", (table) => {
+      table.integer("movieid").unsigned().references("movieschema.id");
+      table.integer("starid").unsigned().references("starschema.id");
     }),
-    knex.schema.createTable("categorySchema", (table) => {
+    knex.schema.createTable("categoryschema", (table) => {
       table.increments("id").primary();
       table.string("category");
     }),
-    knex.schema.createTable("categoriesForSpecificMovie", (table) => {
-      table.integer("movieId").unsigned().references("movieSchema.id");
-      table.integer("categoryId").unsigned().references("categorySchema.id");
+    knex.schema.createTable("categoriesforspecificmovie", (table) => {
+      table.integer("movieid").unsigned().references("movieschema.id");
+      table.integer("categoryid").unsigned().references("categoryschema.id");
     }),
   ]);
 };
 
 exports.down = function (knex) {
   return Promise.all([
-    knex.schema.dropTable("movieSchema"),
-    knex.schema.dropTable("directorSchema"),
-    knex.schema.dropTable("directorsForSpecificMovie"),
-    knex.schema.dropTable("writerSchema"),
-    knex.schema.dropTable("writerCategorySchema"),
-    knex.schema.dropTable("writersForSpecificMovie"),
-    knex.schema.dropTable("starSchema"),
-    knex.schema.dropTable("starsForSpecificMovie"),
-    knex.schema.dropTable("categorySchema"),
-    knex.schema.dropTable("categoriesForSpecificMovie"),
-  ]);
+    knex.schema.dropTable("directorsforspecificmovie"),
+    knex.schema.dropTable("writersforspecificmovie"),
+    knex.schema.dropTable("starsforspecificmovie"),
+    knex.schema.dropTable("categoriesforspecificmovie"),
+  ]).then(() => {
+    return Promise.all([
+      knex.schema.dropTable("movieschema"),
+      knex.schema.dropTable("directorschema"),
+      knex.schema.dropTable("writerschema"),
+      knex.schema.dropTable("writercategoryschema"),
+      knex.schema.dropTable("starschema"),
+      knex.schema.dropTable("categoryschema"),
+    ]);
+  });
 };
