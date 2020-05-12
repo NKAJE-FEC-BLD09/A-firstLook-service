@@ -5,13 +5,11 @@
 
 ## Related Projects
 
-- https://github.com/teamName/repo
+- https://github.com/NKAJE-FEC-BLD09/N-Cast-Service
 
-- https://github.com/teamName/repo
+- https://github.com/NKAJE-FEC-BLD09/k-morelikethis-service
 
-- https://github.com/teamName/repo
-
-- https://github.com/teamName/repo
+- https://github.com/NKAJE-FEC-BLD09/J-Photos-service
 
 ## Table of Contents
 
@@ -41,8 +39,18 @@ From within the root directory:
 
 ```sh
 
-npm install -g webpack
-
 npm install
+
+```
+
+### Seeding Database
+
+From within the root directory:
+
+```sh
+
+knex migrate:latest
+
+knex seed:run
 
 ```
