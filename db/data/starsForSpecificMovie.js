@@ -1,4 +1,4 @@
-module.export = [
+module.exports = [
   {
     movieid: 1,
     starid: 1,

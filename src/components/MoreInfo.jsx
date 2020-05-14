@@ -48,15 +48,15 @@ const MoreInfo = ({ main, directors, writers, stars }) => (
     )}
 
     {stars.length === 1 ? (
-      <p>Star:&nbsp;{<a href="">{stars[0].name}</a>}</p>
+      <p>Star:&nbsp;{<a href="">{stars[0].star}</a>}</p>
     ) : (
       <p>
         Stars:&nbsp;
         {stars.map((star) => (
           <span>
-            <a href="">{star.name}</a>
+            <a href="">{star.star}</a>
             <span>
-              {star.name === stars[stars.length - 1].name ? null : ", "}
+              {star.star === stars[stars.length - 1].star ? null : ", "}
             </span>
           </span>
         ))}
