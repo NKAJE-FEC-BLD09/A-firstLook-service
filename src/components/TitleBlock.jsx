@@ -4,7 +4,20 @@ const TitleBlock = ({ main, categories }) => (
   <span>
     <span className="Ribbon">+</span>
     <span className="titleInfo">
-      <h1>{main.title}</h1>
+      <h1>
+        {main.title}{" "}
+        {main.releasedate ? (
+          <span>
+            (
+            {
+              <a class="quicklink" href="">
+                {main.releasedate.split(" ")[2]}
+              </a>
+            }
+            )
+          </span>
+        ) : null}
+      </h1>
       <span className="subtext">
         {main.rated} | {main.duration} |{" "}
         {categories.map((category) => {
