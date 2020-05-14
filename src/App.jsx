@@ -37,26 +37,20 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div>
+        <div class="top">
           <DropdownMenu />
-        </div>
-        <div>
           <TitleBlock
             main={this.state.main}
             categories={this.state.categories}
           />
-        </div>
-        <div>
           <TrailerView main={this.state.main} />
         </div>
-        <div>
-          <MoreInfo
-            main={this.state.main}
-            directors={this.state.directors}
-            writers={this.state.writers}
-            stars={this.state.stars}
-          />
-        </div>
+        <MoreInfo
+          main={this.state.main}
+          directors={this.state.directors}
+          writers={this.state.writers}
+          stars={this.state.stars}
+        />
       </div>
     );
   }
