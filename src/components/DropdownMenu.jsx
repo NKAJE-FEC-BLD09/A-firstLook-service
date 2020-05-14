@@ -6,6 +6,7 @@ class DropdownMenu extends Component {
 
     this.state = {
       displayMenu: false,
+      displayShareDropdown: false,
     };
     this.showDropdownMenu = this.showDropdownMenu.bind(this);
     this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
@@ -45,8 +46,10 @@ class DropdownMenu extends Component {
           </a>
           <span class="division">|</span>
           <span class="quicklink showMore" onClick={this.showDropdownMenu}>
-            {this.state.displayMenu ? "LESS" : "MORE"}
-            <span class="arrow-down">|</span>
+            {this.state.displayMenu ? "LESS " : "MORE "}
+            <span
+              class={this.state.displayMenu ? "arrow-up" : "arrow-down"}
+            ></span>
           </span>
           <a class="quicklink" href="">
             SHARE
@@ -54,108 +57,164 @@ class DropdownMenu extends Component {
         </div>
         <div className="dd-expansion">
           {this.state.displayMenu ? (
-            <div>
-              <div id="col1">
+            <span>
+              <span id="col1">
                 DETAILS
-                <a class="quicklink" href="">
-                  Full Cast and Crew
-                </a>
-                <a class="quicklink" href="">
-                  Release Dates
-                </a>
-                <a class="quicklink" href="">
-                  Official Sites
-                </a>
-                <a class="quicklink" href="">
-                  Company Credits
-                </a>
-                <a class="quicklink" href="">
-                  Filming & Production
-                </a>
-                <a class="quicklink" href="">
-                  Technical Specs
-                </a>
-              </div>
-              <div id="col2">
+                <div>
+                  <a class="quicklink" href="">
+                    Full Cast and Crew
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Release Dates
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Official Sites
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Company Credits
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Filming & Production
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Technical Specs
+                  </a>
+                </div>
+              </span>
+              <span id="col2">
                 STORYLINE
-                <a class="quicklink" href="">
-                  Taglines
-                </a>
-                <a class="quicklink" href="">
-                  Plot Summary
-                </a>
-                <a class="quicklink" href="">
-                  Synopsis
-                </a>
-                <a class="quicklink" href="">
-                  Plot Keywords
-                </a>
-                <a class="quicklink" href="">
-                  Parents Guide
-                </a>
+                <div>
+                  <a class="quicklink" href="">
+                    Taglines
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Plot Summary
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Synopsis
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Plot Keywords
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Parents Guide
+                  </a>
+                </div>
                 <br />
                 <em>RELATED ITEMS</em>
-                <a class="quicklink" href="">
-                  News
-                </a>
-                <a class="quicklink" href="">
-                  External Sites
-                </a>
-              </div>
-              <div id="col3">
+                <div>
+                  <a class="quicklink" href="">
+                    News
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    External Sites
+                  </a>
+                </div>
+              </span>
+              <span id="col3">
                 OPINION
-                <a class="quicklink" href="">
-                  Awards
-                </a>
-                <a class="quicklink" href="">
-                  FAQ
-                </a>
-                <a class="quicklink" href="">
-                  User Reviews
-                </a>
-                <a class="quicklink" href="">
-                  User Ratings
-                </a>
-                <a class="quicklink" href="">
-                  External Reviews
-                </a>
-                <a class="quicklink" href="">
-                  Metacritic Reviews
-                </a>
+                <div>
+                  <a class="quicklink" href="">
+                    Awards
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    FAQ
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    User Reviews
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    User Ratings
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    External Reviews
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Metacritic Reviews
+                  </a>
+                </div>
                 <br />
                 PHOTO & VIDEO
-                <a class="quicklink" href="">
-                  Photo Gallery
-                </a>
-                <a class="quicklink" href="">
-                  Trailers and Videos
-                </a>
-              </div>
-              <div id="col4">
+                <div>
+                  <a class="quicklink" href="">
+                    Photo Gallery
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Trailers and Videos
+                  </a>
+                </div>
+              </span>
+              <span id="col4">
                 DID YOU KNOW?
-                <a class="quicklink" href="">
-                  Trivia
-                </a>
-                <a class="quicklink" href="">
-                  Goofs
-                </a>
-                <a class="quicklink" href="">
-                  Crazy Credits
-                </a>
-                <a class="quicklink" href="">
-                  Quotes
-                </a>
-                <a class="quicklink" href="">
-                  Alternate Versions
-                </a>
-                <a class="quicklink" href="">
-                  Connections
-                </a>
-                <a class="quicklink" href="">
-                  Soundtracks
-                </a>
-              </div>
-            </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Trivia
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Goofs
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Crazy Credits
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Quotes
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Alternate Versions
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Connections
+                  </a>
+                </div>
+                <div>
+                  <a class="quicklink" href="">
+                    Soundtracks
+                  </a>
+                </div>
+              </span>
+            </span>
           ) : null}
         </div>
       </div>
