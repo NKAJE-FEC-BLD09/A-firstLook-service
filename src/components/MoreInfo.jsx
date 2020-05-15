@@ -47,21 +47,27 @@ const MoreInfo = ({ main, directors, writers, stars }) => (
       </p>
     )}
 
-    {stars.length === 1 ? (
-      <p>Star:&nbsp;{<a href="">{stars[0].star}</a>}</p>
-    ) : (
-      <p>
-        Stars:&nbsp;
-        {stars.map((star) => (
-          <span>
-            <a href="">{star.star}</a>
+    <div>
+      {stars.length === 1 ? (
+        <span>Star:&nbsp;{<a href="">{stars[0].star}</a>}</span>
+      ) : (
+        <span>
+          Stars:&nbsp;
+          {stars.map((star) => (
             <span>
-              {star.star === stars[stars.length - 1].star ? null : ", "}
+              <a href="">{star.star}</a>
+              <span>
+                {star.star === stars[stars.length - 1].star ? null : ", "}
+              </span>
             </span>
-          </span>
-        ))}
-      </p>
-    )}
+          ))}
+        </span>
+      )}
+      <span class="division">|</span>
+      <a class="quicklink" href="">
+        See full cast & crew
+      </a>
+    </div>
 
     <WatchOptions />
     <ReviewBar main={main} />

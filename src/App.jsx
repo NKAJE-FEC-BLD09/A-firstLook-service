@@ -36,7 +36,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div class="app">
         <div class="top">
           <DropdownMenu />
           <TitleBlock

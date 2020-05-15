@@ -15,13 +15,18 @@ class DropdownMenu extends Component {
   showDropdownMenu(e) {
     e.preventDefault();
     this.setState({ displayMenu: true }, () => {
-      document.addEventListener("click", this.hideDropdownMenu);
+      // console.log(document.getElementsByClassName("show-more")[0]);
+      // document
+      //   .getElementsByClassName("show-more")[0]
+      //   .addEventListener("click", this.hideDropdownMenu);
     });
   }
 
   hideDropdownMenu() {
     this.setState({ displayMenu: false }, () => {
-      document.removeEventListener("click", this.hideDropdownMenu);
+      // document
+      //   .getElementsByClassName("show-more")[0]
+      //   .removeEventListener("click", this.hideDropdownMenu);
     });
   }
 
@@ -45,20 +50,27 @@ class DropdownMenu extends Component {
             IMDbPro
           </a>
           <span class="division">|</span>
-          <span class="quicklink showMore" onClick={this.showDropdownMenu}>
+          <span
+            class="quicklink show-more"
+            onClick={
+              this.state.displayMenu
+                ? this.hideDropdownMenu
+                : this.showDropdownMenu
+            }
+          >
             {this.state.displayMenu ? "LESS " : "MORE "}
             <span
               class={this.state.displayMenu ? "arrow-up" : "arrow-down"}
             ></span>
           </span>
-          <a class="quicklink" href="">
+          <a class="share-module quicklink" href="">
             SHARE
           </a>
         </div>
-        <div className="dd-expansion">
+        <div>
           {this.state.displayMenu ? (
-            <span>
-              <span id="col1">
+            <div class="dd-expansion">
+              <span class="col">
                 DETAILS
                 <div>
                   <a class="quicklink" href="">
@@ -91,7 +103,7 @@ class DropdownMenu extends Component {
                   </a>
                 </div>
               </span>
-              <span id="col2">
+              <span class="col">
                 STORYLINE
                 <div>
                   <a class="quicklink" href="">
@@ -119,7 +131,7 @@ class DropdownMenu extends Component {
                   </a>
                 </div>
                 <br />
-                <em>RELATED ITEMS</em>
+                RELATED ITEMS
                 <div>
                   <a class="quicklink" href="">
                     News
@@ -131,7 +143,7 @@ class DropdownMenu extends Component {
                   </a>
                 </div>
               </span>
-              <span id="col3">
+              <span class="col">
                 OPINION
                 <div>
                   <a class="quicklink" href="">
@@ -176,7 +188,7 @@ class DropdownMenu extends Component {
                   </a>
                 </div>
               </span>
-              <span id="col4">
+              <span class="col">
                 DID YOU KNOW?
                 <div>
                   <a class="quicklink" href="">
@@ -214,7 +226,7 @@ class DropdownMenu extends Component {
                   </a>
                 </div>
               </span>
-            </span>
+            </div>
           ) : null}
         </div>
       </div>

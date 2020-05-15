@@ -5,7 +5,13 @@ const TrailerView = ({ main }) => (
     <span>
       <img src={main.imageurl} alt={`Poster for the film ${main.title}`} />
     </span>
-    <span>Placeholder for video trailer</span>
+    <span>
+      <div
+        class="youtube"
+        id="IVZ0B4iDS8w"
+        // style={{width: 560px, height: 315px}}
+      ></div>
+    </span>
   </div>
 );
 

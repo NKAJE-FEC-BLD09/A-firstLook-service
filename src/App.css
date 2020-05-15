@@ -5,6 +5,10 @@
   font-size: 13px;
 }
 
+.app {
+  width: 667px;
+}
+
 .top {
   background-color: #333;
   color: white;
@@ -12,14 +16,19 @@
 
 .dd-navbar {
   display: inline-block;
-  padding: 15px 20px 0 20px;
+  padding: 15px 20px 15px 20px;
 }
 
 .dd-expansion {
+  width: 100%;
   background-color: #2b2b2b;
+  height: 250px;
+  padding: 15px 20px 15px 20px;
+  /* columns: 4; */
 }
 
-.quicklink {
+.quicklink,
+.subtext {
   color: silver;
 }
 
@@ -51,18 +60,26 @@
   display: inline-block;
 }
 
-#col1 {
-  color: white;
+.col {
+  width: 25%;
+  float: left;
 }
 
-#col2 {
-  color: white;
+.share-module {
+  padding-left: 20px;
+  display: inline-block;
 }
 
-#col3 {
-  color: white;
+.ribbon {
+  position: relative;
+  background-image: url(https://m.media-amazon.com/images/G/01/imdb/images/title/title_overview_sprite-1705639977._V_.png)
+    no-repeat;
+  background-position: -8px -62px;
+  width: 40px;
+  height: 58px;
+  display: inline-block;
 }
 
-#col4 {
-  color: white;
+.ribbon:hover {
+  opacity: 0.6;
 }

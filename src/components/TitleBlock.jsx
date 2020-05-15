@@ -1,9 +1,10 @@
 import React from "react";
+import StarRating from "./StarRating.jsx";
 
 const TitleBlock = ({ main, categories }) => (
   <span>
-    <span className="Ribbon">+</span>
-    <span className="titleInfo">
+    <span class="ribbon"></span>
+    <span class="titleInfo">
       <h1>
         {main.title}{" "}
         {main.releasedate ? (
@@ -18,22 +19,37 @@ const TitleBlock = ({ main, categories }) => (
           </span>
         ) : null}
       </h1>
-      <span className="subtext">
-        {main.rated} | {main.duration} |{" "}
+      <span class="subtext">{main.rated}</span>
+      <span class="division">|</span>
+      <span class="subtext">{main.duration}</span>
+      <span class="division">|</span>
+      <span>
         {categories.map((category) => {
           if (
             category.category === categories[categories.length - 1].category
           ) {
-            return category.category;
+            return (
+              <a class="quicklink" href="">
+                {category.category}
+              </a>
+            );
           } else {
-            return category.category + ", ";
+            return (
+              <span>
+                <a class="quicklink" href="">
+                  {category.category}
+                </a>
+                ,&nbsp;
+              </span>
+            );
           }
-        })}{" "}
-        | {main.releasedate}
+        })}
       </span>
+      <span class="division">|</span>
+      <span class="quicklink">{main.releasedate}</span>
     </span>
     <span>
-      * {main.avgreview} {main.numreviews}
+      <StarRating />
     </span>
   </span>
 );
