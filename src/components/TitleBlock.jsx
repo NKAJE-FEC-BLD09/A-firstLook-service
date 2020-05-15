@@ -4,7 +4,7 @@ import StarRating from "./StarRating.jsx";
 const TitleBlock = ({ main, categories }) => (
   <span>
     <span class="ribbon"></span>
-    <span class="titleInfo">
+    <span class="title-info">
       <h1>
         {main.title}{" "}
         {main.releasedate ? (

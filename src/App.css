@@ -72,14 +72,20 @@
 
 .ribbon {
   position: relative;
-  background-image: url(https://m.media-amazon.com/images/G/01/imdb/images/title/title_overview_sprite-1705639977._V_.png)
+  background: url(https://m.media-amazon.com/images/G/01/imdb/images/title/title_overview_sprite-1705639977._V_.png)
     no-repeat;
   background-position: -8px -62px;
   width: 40px;
   height: 58px;
   display: inline-block;
+  margin-left: 20px;
 }
 
 .ribbon:hover {
   opacity: 0.6;
+}
+
+.title-info {
+  display: inline-block;
+  padding: 0 0 15px 15px;
 }
