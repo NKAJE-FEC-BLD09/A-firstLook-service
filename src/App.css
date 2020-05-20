@@ -17,7 +17,7 @@
 
 .dd-navbar {
   display: inline-block;
-  padding: 15px 20px 15px 35px;
+  padding: 15px 20px 15px 25px;
 }
 
 .dd-expansion {
@@ -83,7 +83,7 @@
   width: 40px;
   height: 58px;
   display: inline-block;
-  margin-left: 35px;
+  margin-left: 25px;
 }
 
 .ribbon:hover {
@@ -102,7 +102,7 @@
 .trailer {
   display: inline-block;
   vertical-align: middle;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 .star-box,
@@ -111,7 +111,7 @@
 }
 
 .star-box {
-  padding-left: 20px;
+  padding-left: 0px;
   vertical-align: top;
 }
 
@@ -139,5 +139,13 @@
   font-size: 10px;
 }
 
-.num-reviews {
+.transparent-star {
+  position: relative;
+  background: url(https://m.media-amazon.com/images/G/01/imdb/images/title/title_overview_sprite-1705639977._V_.png)
+    no-repeat;
+  background-position: -8px -196px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-left: 0px;
 }

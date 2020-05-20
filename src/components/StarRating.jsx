@@ -7,6 +7,14 @@ class StarRating extends React.Component {
     this.state = {
       showModal: false,
     };
+    this.clickHandler = this.clickHandler.bind(this);
+  }
+
+  clickHandler(e) {
+    e.preventDefault(e);
+    this.setState({
+      showModal: !this.state.showModal,
+    });
   }
 
   render() {
@@ -23,7 +31,9 @@ class StarRating extends React.Component {
           <div class="num-reviews quicklink">{this.props.main.numreviews}</div>
         </span>
 
-        <span>
+        <span onClick={this.clickHandler}>
+          <span class="transparent-star"></span>
+          <span>Rate This</span>
           <RatingModal showModal={this.state.showModal} />
         </span>
       </span>
