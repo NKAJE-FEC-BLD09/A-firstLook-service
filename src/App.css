@@ -17,14 +17,14 @@
 
 .dd-navbar {
   display: inline-block;
-  padding: 15px 20px 15px 20px;
+  padding: 15px 20px 15px 35px;
 }
 
 .dd-expansion {
   width: 100%;
   background-color: #2b2b2b;
   height: 250px;
-  padding: 15px 20px 15px 20px;
+  padding: 15px 20px 25px 20px;
   /* columns: 4; */
 }
 
@@ -79,7 +79,7 @@
   width: 40px;
   height: 58px;
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 35px;
 }
 
 .ribbon:hover {
@@ -99,4 +99,41 @@
   display: inline-block;
   vertical-align: middle;
   padding-left: 15px;
+}
+
+.star-box,
+.rating-box {
+  display: inline-block;
+}
+
+.star-box {
+  padding-left: 20px;
+  vertical-align: top;
+}
+
+.solid-star {
+  position: relative;
+  background: url(https://m.media-amazon.com/images/G/01/imdb/images/title/title_overview_sprite-1705639977._V_.png)
+    no-repeat;
+  background-position: -15px -118px;
+  width: 30px;
+  height: 40px;
+  display: inline-block;
+  margin-left: 0px;
+}
+
+.star-rating {
+  font-size: 24px;
+  font-family: Arial;
+  color: white;
+  display: inline-block;
+  height: 30px;
+}
+
+.denominator {
+  color: #6b6b6b;
+  font-size: 10px;
+}
+
+.num-reviews {
 }

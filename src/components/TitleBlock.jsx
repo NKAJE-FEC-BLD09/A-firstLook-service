@@ -48,8 +48,8 @@ const TitleBlock = ({ main, categories }) => (
       <span class="division">|</span>
       <span class="quicklink">{main.releasedate}</span>
     </span>
-    <span>
-      <StarRating />
+    <span class="star-box">
+      <StarRating main={main} />
     </span>
   </span>
 );
