@@ -3,7 +3,7 @@ import WatchOptions from "./WatchOptions.jsx";
 import ReviewBar from "./ReviewBar.jsx";
 
 const MoreInfo = ({ main, directors, writers, stars }) => (
-  <div>
+  <div class="more-info">
     <p>{main.description}</p>
     <br />
 

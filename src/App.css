@@ -7,6 +7,7 @@
 
 .app {
   width: 667px;
+  justify-content: center;
 }
 
 .top {
@@ -88,4 +89,14 @@
 .title-info {
   display: inline-block;
   padding: 0 0 15px 15px;
+}
+
+.more-info {
+  padding: 15px 15px 15px 15px;
+}
+
+.trailer {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 15px;
 }

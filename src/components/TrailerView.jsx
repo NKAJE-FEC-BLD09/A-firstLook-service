@@ -1,18 +1,15 @@
 import React from "react";
+import Youtube from "react-youtube";
 
 const TrailerView = ({ main }) => (
-  <div>
-    <span>
+  <span class="trailer-block">
+    <span class="poster">
       <img src={main.imageurl} alt={`Poster for the film ${main.title}`} />
     </span>
-    <span>
-      <div
-        class="youtube"
-        id="IVZ0B4iDS8w"
-        // style={{width: 560px, height: 315px}}
-      ></div>
+    <span class="trailer">
+      <Youtube videoId="IVZ0B4iDS8w" opts={{ height: "268", width: "470" }} />
     </span>
-  </div>
+  </span>
 );
 
 export default TrailerView;

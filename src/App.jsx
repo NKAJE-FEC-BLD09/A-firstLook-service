@@ -36,7 +36,7 @@ class App extends Component {
 
   render() {
     return (
-      <div class="app">
+      <div class="app row d-flex justify-content-center">
         <div class="top">
           <DropdownMenu />
           <TitleBlock
