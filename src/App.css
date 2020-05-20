@@ -33,6 +33,10 @@
   color: silver;
 }
 
+.subtext {
+  font-size: 11px;
+}
+
 .quicklink:hover {
   color: #63c9ff;
   text-decoration: underline;
