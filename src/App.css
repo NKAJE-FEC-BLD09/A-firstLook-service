@@ -149,3 +149,26 @@
   display: inline-block;
   margin-left: 0px;
 }
+
+.rating-modal-box {
+  height: 42px;
+}
+
+.rating-modal-box:hover {
+  background-color: #136cb2;
+}
+
+.rating-star {
+  position: inherit;
+  background: url(https://m.media-amazon.com/images/G/01/imdb/images/sitewide/imdb_global_sprite-1835832765._V_.png)
+    no-repeat;
+  background-position: -227px -1px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.rating-star-hover {
+  background-position: -227px -61px;
+}

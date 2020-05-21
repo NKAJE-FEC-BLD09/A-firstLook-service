@@ -31,7 +31,7 @@ class StarRating extends React.Component {
           <div class="num-reviews quicklink">{this.props.main.numreviews}</div>
         </span>
 
-        <span onClick={this.clickHandler}>
+        <span class="rating-modal-box" onClick={this.clickHandler}>
           <span class="transparent-star"></span>
           <span>Rate This</span>
           <RatingModal showModal={this.state.showModal} />

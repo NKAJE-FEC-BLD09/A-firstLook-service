@@ -63,7 +63,7 @@ class DropdownMenu extends Component {
               class={this.state.displayMenu ? "arrow-up" : "arrow-down"}
             ></span>
           </span>
-          <a class="share-module quicklink" href="">
+          <a class="share-module quicklink" href="" title="Share">
             SHARE
           </a>
         </div>

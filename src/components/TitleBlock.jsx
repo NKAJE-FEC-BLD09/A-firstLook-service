@@ -3,7 +3,7 @@ import StarRating from "./StarRating.jsx";
 
 const TitleBlock = ({ main, categories }) => (
   <span>
-    <span class="ribbon"></span>
+    <span class="ribbon" title="Click to add to watchlist"></span>
     <span class="title-info">
       <h1>
         {main.title}{" "}
@@ -46,7 +46,9 @@ const TitleBlock = ({ main, categories }) => (
         })}
       </span>
       <span class="division">|</span>
-      <span class="quicklink">{main.releasedate}</span>
+      <span class="quicklink" title="See more release dates">
+        {main.releasedate}
+      </span>
     </span>
     <span class="star-box">
       <StarRating main={main} />
