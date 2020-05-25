@@ -1,13 +1,15 @@
+const path = require("path");
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const Promise = require("bluebird");
 const helpers = require("./helperFunctions");
-const cors = require("cors");
+// const cors = require("cors");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(express.static(path.join(__dirname, "../build")));
+// app.use(cors());
 
 app.get("/api/movies/:id", (req, res) => {
   let id = req.params.id;
