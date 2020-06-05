@@ -19,7 +19,7 @@ class StarRating extends React.Component {
 
   render() {
     return (
-      <span>
+      <span class="star-box">
         <span class="solid-star"></span>
         <span class="rating-box">
           <span class="star-rating">
@@ -33,7 +33,7 @@ class StarRating extends React.Component {
 
         <span class="rating-modal-box" onClick={this.clickHandler}>
           <span class="transparent-star"></span>
-          <span>Rate This</span>
+          <span class="rate-this">Rate This</span>
           <RatingModal showModal={this.state.showModal} />
         </span>
       </span>

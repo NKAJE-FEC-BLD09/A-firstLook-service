@@ -152,10 +152,18 @@
 
 .rating-modal-box {
   height: 42px;
+  display: inline-block;
 }
 
 .rating-modal-box:hover {
   background-color: #136cb2;
+}
+
+.rate-this {
+  min-height: 50px;
+  position: relative;
+  display: inline-box;
+  /* align-items: center; */
 }
 
 .rating-star {
