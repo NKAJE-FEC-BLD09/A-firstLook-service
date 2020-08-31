@@ -4,12 +4,13 @@ const app = express();
 const bodyParser = require("body-parser");
 const Promise = require("bluebird");
 const helpers = require("./helperFunctions");
-const cors = require("cors");
+// const cors = require("cors");
 
+app.use(express.static("build"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname, "../build")));
-app.use(cors());
+// app.use(cors());
 
 app.get("/api/movies/:id", (req, res) => {
   let id = req.params.id;
@@ -24,5 +25,5 @@ app.get("/api/movies/:id", (req, res) => {
 
 app.post("api/movies/", (req, res) => {});
 
-let port = 3001;
+let port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`Listening on port ${port}`));
