@@ -5,6 +5,11 @@
   font-size: 13px;
 }
 
+body {
+  justify-content: center;
+  display: grid;
+}
+
 .app {
   width: 667px;
   /* justify-content: center; */
