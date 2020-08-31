@@ -8,7 +8,12 @@ const MoreInfo = ({ main, directors, writers, stars }) => (
     <br />
 
     {directors.length === 1 ? (
-      <p>Director:&nbsp;{directors[0].director}</p>
+      <p>
+        Director:&nbsp;
+        <span>
+          <a href="">{directors[0].director}</a>
+        </span>
+      </p>
     ) : (
       <p>
         Directors:&nbsp;
