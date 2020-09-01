@@ -8,15 +8,13 @@ const MoreInfo = ({ main, directors, writers, stars }) => (
     <br />
 
     {directors.length === 1 ? (
-      <p>
-        Director:&nbsp;
-        <span>
-          <a href="">{directors[0].director}</a>
-        </span>
-      </p>
+      <div>
+        <span class="bold">Director:&nbsp;</span>
+        <a href="">{directors[0].director}</a>
+      </div>
     ) : (
-      <p>
-        Directors:&nbsp;
+      <div>
+        <span class="bold">Directors:&nbsp;</span>
         {directors.map((director) => (
           <span>
             <a href="">{director.director}</a>
@@ -27,17 +25,17 @@ const MoreInfo = ({ main, directors, writers, stars }) => (
             </span>
           </span>
         ))}
-      </p>
+      </div>
     )}
 
     {writers.length === 1 ? (
-      <p>
-        Writer:&nbsp;{<a href="">{writers[0].writer}</a>}&nbsp;
-        {writers[0].category ? `(${writers[0].category})` : null}
-      </p>
+      <div>
+        <span class="bold">Writer:&nbsp;</span>
+        <a href="">{writers[0].writer}</a>
+      </div>
     ) : (
-      <p>
-        Writers:&nbsp;
+      <div>
+        <span class="bold">Writers:&nbsp;</span>
         {writers.map((writer) => (
           <span>
             <a href="">{writer.writer}</a>
@@ -49,15 +47,18 @@ const MoreInfo = ({ main, directors, writers, stars }) => (
             </span>
           </span>
         ))}
-      </p>
+      </div>
     )}
 
     <div>
       {stars.length === 1 ? (
-        <span>Star:&nbsp;{<a href="">{stars[0].star}</a>}</span>
+        <span>
+          <span class="bold">Star:&nbsp;</span>
+          <a href="">{stars[0].star}</a>
+        </span>
       ) : (
         <span>
-          Stars:&nbsp;
+          <span class="bold">Stars:&nbsp;</span>
           {stars.map((star) => (
             <span>
               <a href="">{star.star}</a>

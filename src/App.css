@@ -194,3 +194,9 @@ body {
 .rating-star-hover {
   background-position: -227px -61px;
 }
+
+.bold {
+  color: #666666;
+  font-weight: bold;
+  display: inline;
+}
