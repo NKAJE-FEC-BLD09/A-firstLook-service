@@ -200,3 +200,22 @@ body {
   font-weight: bold;
   display: inline;
 }
+
+.watch-opts {
+  height: 88px;
+  display: flex;
+  align-items: center;
+}
+
+.prime-btn {
+  background-color: #2259bf;
+  height: 50px;
+  width: 304px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: arial;
+  margin-right: 8px;
+}
