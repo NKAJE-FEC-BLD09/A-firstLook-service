@@ -219,3 +219,12 @@ body {
   font-family: arial;
   margin-right: 8px;
 }
+
+.more-opts {
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: #dbdbdb;
+  color: #0e63be;
+  border-radius: 6px;
+}
