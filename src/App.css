@@ -228,3 +228,9 @@ body {
   color: #0e63be;
   border-radius: 6px;
 }
+
+.watch-opts-divider {
+  height: 2.5rem;
+  border-left: solid 1px #c5c5c5;
+  margin: 0 20px;
+}
