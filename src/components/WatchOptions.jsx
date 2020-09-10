@@ -5,7 +5,7 @@ const WatchOptions = () => (
     <button class="prime-btn">Watch on Prime</button>
     <button class="more-opts">...</button>
     <span class="watch-opts-divider"></span>
-    <button>+ Add to Watchlist</button>
+    <button class="add-watch-list">+ Add to Watchlist</button>
   </span>
 );
 

@@ -220,13 +220,23 @@ body {
   margin-right: 8px;
 }
 
-.more-opts {
+.more-opts,
+.add-watch-list {
   height: 50px;
   width: 50px;
   border: none;
   background-color: #dbdbdb;
   color: #0e63be;
   border-radius: 6px;
+  font-weight: bold;
+}
+
+.more-opts {
+  width: 50px;
+}
+
+.add-watch-list {
+  width: 186px;
 }
 
 .watch-opts-divider {
