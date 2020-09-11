@@ -4,8 +4,11 @@ const ReviewBar = ({ main }) => (
   <div>
     {main.metascore ? (
       <span>
-        <span>{main.metascore}</span>
-        <span>Metascore</span>
+        <span class="score-box">
+          <span class="score-value">{main.metascore}</span>
+        </span>
+
+        <a href="">Metascore</a>
       </span>
     ) : null}
 

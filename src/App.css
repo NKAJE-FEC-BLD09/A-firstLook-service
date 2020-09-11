@@ -244,3 +244,18 @@ body {
   border-left: solid 1px #c5c5c5;
   margin: 0 20px;
 }
+
+.score-box {
+  color: white;
+  font-size: 13px;
+  height: 28px;
+  width: 28px;
+  display: inline-block;
+  text-align: center;
+  background-color: #ffcc33;
+}
+
+.score-value {
+  vertical-align: middle;
+  line-height: 28px;
+}
