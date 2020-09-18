@@ -7,8 +7,14 @@ const ReviewBar = ({ main }) => (
         <span class="score-box">
           <span class="score-value">{main.metascore}</span>
         </span>
-
-        <a href="">Metascore</a>
+        <span>
+          <a href="" style={{ verticalAlign: "top" }}>
+            Metascore
+          </a>
+          <div>
+            From <a href="metacritic.com">metacritic.com</a>
+          </div>
+        </span>
       </span>
     ) : null}
 
